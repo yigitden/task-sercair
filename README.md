@@ -11,7 +11,7 @@
 - First, clone the project:
 
 ```sh
-git clone https://github.com/yigitden/e-cozum-bootcamp-final-project.git
+git clone https://github.com/yigitden/task-sercair.git
 ```
 
 - Then, start the project on localhost:
