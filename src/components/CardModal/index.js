@@ -1,12 +1,13 @@
-import * as React from "react";
+ 
 import { Box, CardMedia, Button, Typography, Modal } from "@mui/material";
+import { useState } from "react";
 
 const style = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
+  maxWidth: 500,
   bgcolor: "background.paper",
   border: "1px solid #e2e2e2",
   boxShadow: 24,
@@ -14,10 +15,15 @@ const style = {
 };
 
 const CardModal = ({ product }) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [open, setOpen] = useState(false); 
 
+  const handleOpen = () => {
+      setOpen(true)
+      localStorage.setItem('productData',JSON.stringify(product))
+    };
+  const handleClose = () => setOpen(false);
+  
+ 
   return (
     <div>
       <Button onClick={handleOpen} variant="contained">
@@ -46,6 +52,8 @@ const CardModal = ({ product }) => {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {product.desc}
           </Typography>
+           
+          
         </Box>
       </Modal>
     </div>
