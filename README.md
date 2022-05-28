@@ -43,11 +43,11 @@ yarn run test
 
 ## Main Page
 
-![Main Page](previews/main.png)
+![Main Page](preview/main.png)
 
 ## Modal
 
-![Modal](previews/modal.png)
+![Modal](preview/modal.png)
 
 ## Discount Modal
-![Discount Modal](previews/discountModal.png)
+![Discount Modal](preview/discountModal.png)
