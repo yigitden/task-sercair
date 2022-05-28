@@ -1,5 +1,4 @@
-
-import { Box,Grid } from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./components/Card";
@@ -25,20 +24,22 @@ function App() {
   }, []);
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 8 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-      >
-        {allData &&
-          allData.map((product, index) => (
-            <Grid item xs={4} sm={4} md={4} key={index}>
-              <ProductCard product={product} isLoading={isLoading} />
-            </Grid>
-          ))}
-      </Grid>
-    </Box>
+    <Container fixed>
+      <Box>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 8 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {allData &&
+            allData.map((product, index) => (
+              <Grid item xs={4} sm={4} md={4} key={index}>
+                <ProductCard product={product} isLoading={isLoading} />
+              </Grid>
+            ))}
+        </Grid>
+      </Box>
+    </Container>
   );
 }
 
